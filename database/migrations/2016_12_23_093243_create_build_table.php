@@ -28,6 +28,61 @@ class CreateBuildTable extends Migration
             $table->integer('rx_id');
             $table->integer('user_id');
             $table->timestamps();
+
+            $table->foreign('frame_id')
+                ->references('id')
+                ->on('frames')
+                ->onDelete('cascade');
+
+            $table->foreign('motor_id')
+                ->references('id')
+                ->on('motors')
+                ->onDelete('cascade');
+
+            $table->foreign('fc_id')
+                ->references('id')
+                ->on('fcs')
+                ->onDelete('cascade');
+
+            $table->foreign('esc_id')
+                ->references('id')
+                ->on('escs')
+                ->onDelete('cascade');
+
+            $table->foreign('vtx_id')
+                ->references('id')
+                ->on('vtxs')
+                ->onDelete('cascade');
+
+            $table->foreign('cam_id')
+                ->references('id')
+                ->on('cams')
+                ->onDelete('cascade');
+
+            $table->foreign('pdb_id')
+                ->references('id')
+                ->on('pdbs')
+                ->onDelete('cascade');
+
+            $table->foreign('prop_id')
+                ->references('id')
+                ->on('props')
+                ->onDelete('cascade');
+
+            $table->foreign('osd_id')
+                ->references('id')
+                ->on('osds')
+                ->onDelete('cascade');
+
+            $table->foreign('rx_id')
+                ->references('id')
+                ->on('rxs')
+                ->onDelete('cascade');
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
 
 
