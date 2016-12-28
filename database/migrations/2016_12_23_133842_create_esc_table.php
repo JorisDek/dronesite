@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEscTable extends Migration
+class CreateEscsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -31,6 +31,6 @@ class CreateEscTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('escs');
     }
 }

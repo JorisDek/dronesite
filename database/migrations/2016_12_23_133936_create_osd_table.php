@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOsdTable extends Migration
+class CreateOsdsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class CreateOsdTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('osds', function(Blueprint $table){
+            $table->increments('id');
+            $table->string('brand');
+            $table->string('model');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreateOsdTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('osds');
     }
 }

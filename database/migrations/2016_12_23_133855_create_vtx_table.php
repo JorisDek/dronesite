@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVtxTable extends Migration
+class CreateVtxsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -31,6 +31,6 @@ class CreateVtxTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('vtxs');
     }
 }
